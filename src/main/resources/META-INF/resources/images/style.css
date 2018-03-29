@@ -1,0 +1,55 @@
+BODY {
+         font-family: Verdana,Helvetica;
+}
+.header {
+        font-family: Verdana,Helvetica; 
+        font-size: 14pt;
+}
+.message {
+        font-family: Verdana,Helvetica;
+        font-size: 10pt;
+	color: #0000ff;
+	font-weight: bold;
+}
+.error {
+        font-family: Verdana,Helvetica;
+        font-size: 10pt;
+	color: #ff0000;
+	font-weight: bold;
+}
+.name {
+        font-family: Verdana,Helvetica;
+        font-size: 10pt;
+		text-align:right;
+		margin-right:5px;
+}
+
+.button {
+        font-family: Verdana,Helvetica;
+        font-size: 10pt;
+}
+.value {
+        font-family: Verdana,Helvetica;
+        font-size: 10pt;
+	font-weight: bold;
+	text-align: left;
+}
+.label {
+        font-family: Verdana,Helvetica;
+        font-size: 10pt;
+}
+.default {
+        font-family: Verdana,Helvetica;
+        font-size: 10pt;
+        color: #999999;
+        text-align: justify;
+}
+.linkcaption {
+        font-family: Verdana,Helvetica;
+        font-size: 10pt;
+        color: #cccccc;
+}
+.link {
+        font-family: Verdana,Helvetica;
+        font-size: 10pt;
+}
