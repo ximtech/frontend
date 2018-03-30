@@ -1,10 +1,13 @@
 package services;
 
 import java.text.SimpleDateFormat;
+import java.util.Collections;
 import java.util.Date;
+import java.util.List;
 
 import dto.CurrencyRequest;
 import dto.CurrencyResponse;
+import dto.LogDTO;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
@@ -43,11 +46,14 @@ public class CurrencyServiceImpl implements CurrencyService {
     @Override
     public void populateModelParamsFromResponse(Model model, CurrencyResponse response) {
         if (response != null) {
+            List<LogDTO> logList = response.getLogList();
+            Collections.reverse(logList);
+
             model.addAttribute("currencyCode", response.getCurrencyCode());
             model.addAttribute("currencyNum", response.getCurrencyNum());
             model.addAttribute("currencyE", response.getCurrencyE());
             model.addAttribute("currencyFullName", response.getCurrencyFullName());
-            model.addAttribute("requestDateAndTime", response.getRequestDateAndTime());
+            model.addAttribute("logList", logList);
             model.addAttribute("clientIP", response.getClientIP());
             model.addAttribute("errorMessage", response.getErrorMessage());
 
