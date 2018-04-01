@@ -14,18 +14,6 @@
             color: #444444;
         }
 
-        .header {
-            font-family: Arial;
-            font-size: 14pt;
-        }
-
-        .message {
-            font-family: Arial;
-            font-size: 10pt;
-            color: #0000ff;
-            font-weight: bold;
-        }
-
         .error {
             font-family: Arial;
             font-size: 10pt;
@@ -59,28 +47,22 @@
             text-align: left;
         }
 
+        .label2 {
+            font-family: Arial;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        span.pos {
+            position: relative;
+            right: 8%;
+        }
+
         th {
             font-family: Arial;
             font-size: 12px;
             background-color: #999999;
             text-align: justify;
-        }
-
-        table.autoComp {
-            background-color: #e0ecff;
-            border: 1px solid #7f9db9;
-            cursor: pointer;
-            position: absolute;
-            top: 1px;
-            left: 1px;
-            z-index: 0;
-            padding: 0px;
-            margin: 0px;
-            margin-top: 0px;
-            margin-right: 0px;
-            margin-bottom: 0px;
-            margin-left: 0px;
-            border-spacing: 2px;
         }
 
         .error {
@@ -101,67 +83,54 @@
                 <div style="background-color:#ffffff; border:0px; float:both; clear:none; margin:0em; border-style:none">
                     <table width="100%" border="0" cellspacing="0" cellpadding="2">
                         <tr>
-                            <td style="padding:13px 0px 0px 20px;"><img src="../images/currency.jpg" alt="" width="100"
-                                                                        height="100" border="0"></td>
-                            <td style="padding:8px 20px 0px 0px;text-align:right"></td>
+                            <td rowspan="5" style="padding:20px 0px 0px 40px;"><img src="../images/currency.jpg" alt="" width="120"
+                                                                        height="120" border="0"></td>
+
+                            <td class="label2" colspan="2"><span class="pos"><b>Currency Information</b></span></td>
+                        </tr>
+                        <tr>
+                            <td width="40%" class="name">Code:</td>
+                            <td width="60%" class="value">${currencyCode}</td>
+                        </tr>
+                        <tr>
+                            <td class="name">Num:</td>
+                            <td class="value">${currencyNum}</td>
+                        </tr>
+                        <tr>
+                            <td class="name">E:</td>
+                            <td class="value">${currencyE}</td>
+                        </tr>
+                        <tr>
+                            <td class="name">Currency:</td>
+                            <td class="value">${currencyFullName}</td>
                         </tr>
                     </table>
 
-
                     <table cellspacing="5" width="100%" border="0">
-                        <tr>
-                            <td>
-                                <form>
-                                    <div class="label" style="margin:15px 10px 15px 15px;text-align: center">Currency Information</div>
-
                         <tr>
                             <td id="message" class="error" colspan="2" 3dsdisplay="error">${errorMessage}</td>
                         </tr>
 
                         <script>
-                            var x = document.getElementById("message").textContent;
-                            var c = document.getElementById("message");
-                            if (x === "Success") {
-                                c.style.display = "none";
+                            var errorMessage = document.getElementById("message").textContent;
+                            var errorDisplay = document.getElementById("message");
+                            if (errorMessage === "Success") {
+                                errorDisplay.style.display = "none";
                             } else {
-                                c.style.display = "block";
+                                errorDisplay.style.display = "block";
                             }
                         </script>
 
-                        <table cellspacing="1" cellpadding="1" border="0" width="100%">
-                            <tr>
-                                <td width="44%" class="name">Code:</td>
-                                <td width="56%" class="value">${currencyCode}</td>
-                            </tr>
-                            <tr>
-                                <td class="name">Num:</td>
-                                <td class="value">${currencyNum}</td>
-                            </tr>
-                            <tr>
-                                <td class="name">E:</td>
-                                <td class="value">${currencyE}</td>
-                            </tr>
-                            <tr>
-                                <td class="name">Currency:</td>
-                                <td class="value">${currencyFullName}</td>
-                            </tr>
-                            <tr>
-                                <td class="name">&nbsp;</td>
-                                <td class="value"></td>
-                            </tr>
-
-                        </table>
-
                         <tr>
                             <td>
-                                <div class="label" style="text-align: center">Request Information</div>
+                                <div class="label" style="text-align: center"><b>Request Information</b></div>
                             </td>
                         </tr>
 
                         <tr>
                             <td align="center">
                                 <table cellspacing="0" width="96%" border="1"
-                                       style="border:1px solid #000066;background-color:#ffffff">
+                                       style="border:1px solid black;background-color:#ffffff">
                                     <tr>
                                         <th>Code</th>
                                         <th>Client IP</th>
@@ -209,7 +178,6 @@
                         <!-- ***************** -->
                     </table>
                 </div>
-                <!-- </td> -->
         </tr>
     </table>
 </center>
