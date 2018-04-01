@@ -28,7 +28,6 @@ public class MainController implements ErrorController {
     @Autowired
     private CurrencyService currencyService;
 
-
 	@GetMapping("/")
 	public String startPage(Map<String, Object> model) {
 	    LOGGER.info("Entering to the home page.");

@@ -1,8 +1,6 @@
 package services;
 
-import java.text.SimpleDateFormat;
 import java.util.Collections;
-import java.util.Date;
 import java.util.List;
 
 import dto.CurrencyRequest;
@@ -18,9 +16,6 @@ public class CurrencyServiceImpl implements CurrencyService {
     private static final Logger LOGGER = Logger.getLogger(CurrencyServiceImpl.class);
 
     private static final String REST_SERVICE_URI = "http://localhost:8090/number";
-    private static final String COMMENT_START = "MESSAGE_COMMENT_START";
-    private static final String COMMENT_END = "MESSAGE_COMMENT_END";
-    private static final String SUCCESS = "Success";
 
     private RestTemplate restTemplate;
 
@@ -56,14 +51,6 @@ public class CurrencyServiceImpl implements CurrencyService {
             model.addAttribute("logList", logList);
             model.addAttribute("clientIP", response.getClientIP());
             model.addAttribute("errorMessage", response.getErrorMessage());
-
-            if (response.getErrorMessage().equals(SUCCESS)) {
-                model.addAttribute(COMMENT_START, "<!--");
-                model.addAttribute(COMMENT_END, "-->");
-            } else {
-                model.addAttribute(COMMENT_START, "");
-                model.addAttribute(COMMENT_END, "");
-            }
         }
     }
 }

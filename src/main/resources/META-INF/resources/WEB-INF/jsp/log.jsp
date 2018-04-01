@@ -94,7 +94,7 @@
 <body bgcolor="#f0f0f0" marginwidth="0" marginheight="0" leftmargin="0" topmargin="0">
 <br>
 <center>
-    <table cellpadding="0" cellspacing="0" border="0" width="600"
+    <table cellpadding="0" cellspacing="10" border="0" width="600"
            style="border:1px solid #000066;background-color:#ffffff">
         <tr>
             <td valign="top">
@@ -108,19 +108,25 @@
                     </table>
 
 
-                    <table cellspacing="10" width="100%" border="0">
+                    <table cellspacing="5" width="100%" border="0">
                         <tr>
                             <td>
                                 <form>
-                                    <div class="label" style="margin:15px 10px 15px 15px;text-align: center">Currency
-                                        Information
-                                    </div>
+                                    <div class="label" style="margin:15px 10px 15px 15px;text-align: center">Currency Information</div>
 
-                        ${MESSAGE_COMMENT_START}
                         <tr>
-                            <td class="error" colspan="2" 3dsdisplay="error">${errorMessage}</td>
+                            <td id="message" class="error" colspan="2" 3dsdisplay="error">${errorMessage}</td>
                         </tr>
-                        ${MESSAGE_COMMENT_END}
+
+                        <script>
+                            var x = document.getElementById("message").textContent;
+                            var c = document.getElementById("message");
+                            if (x === "Success") {
+                                c.style.display = "none";
+                            } else {
+                                c.style.display = "block";
+                            }
+                        </script>
 
                         <table cellspacing="1" cellpadding="1" border="0" width="100%">
                             <tr>
@@ -178,11 +184,12 @@
                                                 class="value">${log.getRequestTime()}</td>
                                         </tr>
                                     </c:forEach>
-
                                 </table>
                             </td>
                         </tr>
 
+                        <tr>
+                            <td>
                         <form>
                             <table width="100%" border="0" cellspacing="1" cellpadding="2">
                                 <tr>
@@ -195,6 +202,8 @@
                                 </tr>
                             </table>
                         </form>
+                            </td>
+                        </tr>
                         <!-- ***************** -->
                         <!-- Content ends here -->
                         <!-- ***************** -->
