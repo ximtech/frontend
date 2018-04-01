@@ -101,8 +101,8 @@
                 <div style="background-color:#ffffff; border:0px; float:both; clear:none; margin:0em; border-style:none">
                     <table width="100%" border="0" cellspacing="0" cellpadding="2">
                         <tr>
-                            <td style="padding:13px 0px 0px 20px;"><img src="../images/currency.jpg" alt="" width="90"
-                                                                        height="90" border="0"></td>
+                            <td style="padding:13px 0px 0px 20px;"><img src="../images/currency.jpg" alt="" width="100"
+                                                                        height="100" border="0"></td>
                             <td style="padding:8px 20px 0px 0px;text-align:right"></td>
                         </tr>
                     </table>
