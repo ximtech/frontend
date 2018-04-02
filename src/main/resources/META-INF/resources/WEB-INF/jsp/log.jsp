@@ -80,7 +80,7 @@
            style="border:1px solid #000066;background-color:#ffffff">
         <tr>
             <td valign="top">
-                <div style="background-color:#ffffff; border:0px; float:both; clear:none; margin:0em; border-style:none">
+                <div style="background-color:#ffffff; border:0px; clear:none; margin:0em; border-style:none">
                     <table width="100%" border="0" cellspacing="0" cellpadding="2">
                         <tr>
                             <td rowspan="5" style="padding:20px 0px 0px 40px;"><img src="../images/currency.jpg" alt="" width="120"
